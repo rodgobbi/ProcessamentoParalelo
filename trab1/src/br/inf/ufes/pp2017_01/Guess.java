@@ -15,6 +15,10 @@ public class Guess implements Serializable {
 
 	private byte[] message;
 	// mensagem decriptografada com a chave candidata
+	public Guess(String key, byte[] message) {
+		this.key = key;
+		this.message = message;
+	}
 
 	public String getKey() {
 		return key;

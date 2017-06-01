@@ -11,9 +11,10 @@ public class SlaveManagerTest implements SlaveManager {
     @Override
    public void foundGuess(java.util.UUID slaveKey, int attackNumber, long currentindex,
            Guess currentguess)
-           throws java.rmi.RemoteException {}
+           throws java.rmi.RemoteException
+           {System.out.println("foundGuess\nslaveKey = "+slaveKey+"\nattackNumber = "+attackNumber+"\ncurrentindex = "+currentindex+"\nkey = "+currentguess.getKey());}
   @Override
    public void checkpoint(java.util.UUID slaveKey, int attackNumber, long currentindex)
            throws java.rmi.RemoteException
-           {System.out.println("slaveKey = "+slaveKey+"\nattackNumber = "+attackNumber+"\ncurrentindex = "+currentindex);}
+           {System.out.println("checkpoint\nslaveKey = "+slaveKey+"\nattackNumber = "+attackNumber+"\ncurrentindex = "+currentindex);}
 }
